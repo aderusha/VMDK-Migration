@@ -4,6 +4,8 @@ Scripts to assist in a mass storage migration utilizing svMotion.  This is a thr
 ### [Export-VMDKs.ps1](https://github.com/aderusha/VMDK-Migration/blob/master/Export-VMDKs.ps1)
 This script utilizes [PowerCLI](https://www.vmware.com/support/developer/PowerCLI/) to export a list of VM Hard Disk objects in the specified vCenter Datacenter to a CSV file.  The resulting CSV can be used to manually map out target Datastore objects for each HDD found in each VM.  The CSV is then used as an input to the second script below.
 
+The beginning of the file defines some required values for execution.  Enter the name of your vCenter host and target Datacenter as appropriate for your environment.
+
 ### [Create-MigrationScript.ps1](https://github.com/aderusha/VMDK-Migration/blob/master/Create-MigrationScript.ps1)
 This script will ingest the CSV file created by [Export-VMDKs.ps1](https://github.com/aderusha/VMDK-Migration/blob/master/Export-VMDKs.ps1) to generate a migration script.
 
